@@ -120,6 +120,8 @@ export interface PortfolioData {
     projectsCount: string;
     clientSatisfaction: string;
     yearsExperience: string;
+    commitsCount?: string;
+    supportAvailability?: string;
   };
   socialLinks: {
     linkedin: string;
@@ -145,31 +147,33 @@ export const portfolioData: PortfolioData = {
   personal: {
     name: "Jay Gupta",
     monogram: "JG",
-    title: "Senior Full-Stack Python & Application Developer",
-    tagline: "Hi, I’m a\nSenior Python\nDeveloper",
+    title: "Full Stack Developer | Automation Engineer | API & QA Specialist",
+    tagline: "Full Stack Developer\nAutomation Engineer\nAPI & QA Specialist",
     location: "Ahmedabad, Gujarat, India",
     status: "AVAILABLE FOR WORK",
     hourlyRate: "$35 - $50/HR",
-    badge: "PYTHON & FASTAPI EXPERT",
-    bio: "Results-driven Python developer skilled at writing efficient, reusable, testable, and scalable code for web and desktop applications. Proficient with Django and FastAPI, experienced in Postgres and MySQL database design and optimization, and fluent with data tools (Pandas, NumPy, Matplotlib) for ML/AI model development and deployment.",
-    mission: "My mission is to architect high-performance backend systems, automated data processing pipelines, and resilient web applications using Python, Django, FastAPI, and Docker — providing seamless scalability and real technical efficiency.",
+    badge: "FULL STACK & AUTOMATION SPECIALIST",
+    bio: "I build scalable web applications, automation solutions, payment systems, and intelligent software with modern technologies.",
+    mission: "My mission is to architect high-performance full-stack applications, automated data processing engines, resilient payment integrations, and bulletproof QA pipelines using modern web and backend technologies.",
     email: "jayg3229@gmail.com",
-    phone: "9157569030",
+    phone: "+91 9157569030",
     cvUrl: "#",
     portraitImage: "https://i.ibb.co/rRtckbWq/Whats-App-Image-2026-07-18-at-12-31-39-AM.jpg",
     workspaceImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80",
-    languages: ["English", "Hindi"],
+    languages: ["English", "Hindi", "Gujarati"],
     hobbies: [
-      "Cryptocurrency trading",
-      "Playing cricket and football",
-      "Engaging in chess",
-      "Learning about new technologies in free time"
+      "Algorithmic Trading & Bot Automation",
+      "Playing Cricket & Football",
+      "Chess Strategy & Logic Puzzles",
+      "Exploring Cyber Tech & AI Innovations"
     ]
   },
   stats: {
-    projectsCount: "15+",
-    clientSatisfaction: "98%",
-    yearsExperience: "4+"
+    projectsCount: "10+",
+    clientSatisfaction: "95%",
+    yearsExperience: "4+",
+    commitsCount: "100+",
+    supportAvailability: "24/7"
   },
   socialLinks: {
     linkedin: "https://www.linkedin.com/public-profile/settings",
@@ -183,35 +187,27 @@ export const portfolioData: PortfolioData = {
     { name: "Pristine InfoSolutions", logoText: "PRISTINE INFOSOLUTIONS" }
   ],
   skills: [
-    "Python",
-    "Django Framework",
-    "FastAPI",
-    "MySQL",
-    "PostgreSQL",
-    "Pandas",
-    "NumPy",
-    "Matplotlib",
-    "SciPy",
-    "SkLearn",
-    "Web Automation",
-    "Node Testing",
-    "IoT & Robotics",
-    "Docker",
-    "C / C++",
-    "JavaScript"
+    "HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind", "Material UI",
+    "Node.js", "Express", "MongoDB", "MySQL", "REST APIs", "GraphQL", "Socket.io",
+    "Firebase", "AWS", "Vercel", "Netlify", "Cloudinary", "Docker",
+    "Git", "GitHub", "VS Code", "Figma", "Postman", "Cypress", "ESLint", "Python", "FastAPI"
   ],
   skillCategories: [
     {
-      category: "Backend & Web Architecture",
-      skills: ["Python", "Django Framework", "FastAPI", "RESTful APIs", "Django ORM", "Microservices"]
+      category: "Frontend",
+      skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind", "Material UI"]
     },
     {
-      category: "Data Science & Machine Learning",
-      skills: ["Pandas", "NumPy", "Matplotlib", "SciPy", "SkLearn", "Predictive Modeling", "Excel Analytics"]
+      category: "Backend",
+      skills: ["Node.js", "Express", "MongoDB", "MySQL", "REST APIs", "GraphQL", "Socket.io", "Python", "FastAPI"]
     },
     {
-      category: "Database & DevOps Automation",
-      skills: ["MySQL & PostgreSQL", "Docker Containerization", "Web Automation (Selenium)", "Node Testing", "Git & CI/CD", "IoT & Embedded C"]
+      category: "Cloud & Database",
+      skills: ["Firebase", "AWS", "Vercel", "Netlify", "Cloudinary", "Docker"]
+    },
+    {
+      category: "Tools",
+      skills: ["Git", "GitHub", "VS Code", "Figma", "Postman", "Cypress", "ESLint"]
     }
   ],
   projects: [
