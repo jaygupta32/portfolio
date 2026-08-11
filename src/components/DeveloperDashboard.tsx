@@ -120,7 +120,7 @@ export const DeveloperDashboard: React.FC = () => {
             <div className="grid grid-cols-3 gap-3 font-mono text-center">
               <div className="bg-slate-950/70 p-3 rounded-xl border border-slate-800">
                 <span className="text-xs text-slate-400 block uppercase text-[10px]">Active Repos</span>
-                <span className="text-base font-extrabold text-cyan-400">28 Public</span>
+                <span className="text-base font-extrabold text-cyan-400">8 Public</span>
               </div>
               <div className="bg-slate-950/70 p-3 rounded-xl border border-slate-800">
                 <span className="text-xs text-slate-400 block uppercase text-[10px]">CI/CD Pipelines</span>
