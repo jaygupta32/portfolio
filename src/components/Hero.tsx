@@ -111,14 +111,14 @@ export const Hero: React.FC<HeroProps> = ({ data, onViewProjects }) => {
                     {personal.badge}
                   </div>
 
-                  {/* <div className="pt-1 border-t border-[#E8E8E8]">
-                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#9A9A9A] block">
+                  <div className="pt-1 border-t border-[#E8E8E8]">
+                    {/* <span className="text-[10px] font-semibold uppercase tracking-wider text-[#9A9A9A] block">
                       Hourly Rate:
-                    </span>
-                    <span className="text-xs font-bold text-[#0A8FFF] bg-[#E8F3FF] px-2.5 py-1 rounded inline-block mt-1 font-mono">
+                    </span> */}
+                    {/* <span className="text-xs font-bold text-[#0A8FFF] bg-[#E8F3FF] px-2.5 py-1 rounded inline-block mt-1 font-mono">
                       {personal.hourlyRate}
-                    </span>
-                  </div> */}
+                    </span> */}
+                  </div>
                 </div>
               </div>
             </div>
