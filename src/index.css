@@ -8,45 +8,113 @@
 
   body {
     font-family: var(--font-sans);
-    color: #111111;
-    background-color: #08243B;
+    color: #F8FAFC;
+    background-color: #020617;
+    overflow-x: hidden;
+    selection-background-color: #3B82F6;
+    selection-color: #FFFFFF;
   }
 }
 
-/* Custom scrollbars */
+/* Custom Cyber Scrollbars */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #020617;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c5c5c5;
-  border-radius: 4px;
+  background: #1E293B;
+  border-radius: 3px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0a8fff;
+  background: #3B82F6;
+  box-shadow: 0 0 10px #3B82F6;
 }
 
-/* Editorial badge utilities */
-.badge-blue {
-  @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold tracking-wider uppercase text-[#0A8FFF] bg-[#E8F3FF] border border-[#D0E6FF];
+/* Glassmorphism Cyber Card */
+.glass-panel {
+  background: rgba(8, 17, 47, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-/* Subtle glow */
-.subtle-glow {
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+.glass-panel:hover {
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.2), inset 0 0 15px rgba(59, 130, 246, 0.1);
 }
 
-/* Image zoom effect */
-.img-editorial-hover {
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+/* Cyber Glow Text */
+.glow-text-cyan {
+  text-shadow: 0 0 12px rgba(6, 182, 212, 0.6), 0 0 24px rgba(6, 182, 212, 0.3);
 }
-.group:hover .img-editorial-hover {
-  transform: scale(1.03);
+
+.glow-text-blue {
+  text-shadow: 0 0 12px rgba(59, 130, 246, 0.6), 0 0 24px rgba(59, 130, 246, 0.3);
+}
+
+.glow-text-purple {
+  text-shadow: 0 0 12px rgba(139, 92, 246, 0.6), 0 0 24px rgba(139, 92, 246, 0.3);
+}
+
+/* Cyber Pulse Dot */
+@keyframes cyber-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.15);
+    box-shadow: 0 0 12px 6px rgba(6, 182, 212, 0);
+  }
+}
+
+.animate-cyber-pulse {
+  animation: cyber-pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* Subtle Floating Animation */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+@keyframes float-medium {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float-medium {
+  animation: float-medium 4s ease-in-out infinite;
+}
+
+/* Scanline Overlay */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
 }
 

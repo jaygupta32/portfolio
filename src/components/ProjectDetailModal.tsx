@@ -34,31 +34,31 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
   if (!project) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/75 backdrop-blur-md animate-fadeIn">
-      <div className="relative w-full max-w-4xl max-h-[92vh] bg-white border border-[#E8E8E8] rounded-3xl overflow-y-auto shadow-2xl no-scrollbar">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-xl animate-fadeIn">
+      <div className="relative w-full max-w-4xl max-h-[92vh] bg-[#0B132B] text-slate-100 border border-cyan-500/40 rounded-3xl overflow-y-auto shadow-[0_0_50px_rgba(2,6,23,0.9)] no-scrollbar space-y-6 p-6 sm:p-8">
         
         {/* Sticky Close Header */}
-        <div className="sticky top-0 z-20 bg-white/95 backdrop-blur-md px-6 py-4 border-b border-[#E8E8E8] flex items-center justify-between">
-          <div className="flex items-center gap-2">
+        <div className="sticky -top-6 -mx-6 -mt-6 sm:-mx-8 sm:-mt-8 z-20 bg-[#0B132B]/95 backdrop-blur-md px-6 sm:px-8 py-4 border-b border-slate-800 flex items-center justify-between">
+          <div className="flex items-center gap-3">
             {project.statusTag ? (
-              <span className="text-xs font-extrabold text-[#0A8FFF] bg-[#E8F3FF] border border-[#D0E6FF] px-3 py-1 rounded-full flex items-center gap-1.5 shadow-xs">
-                <span className="w-2 h-2 rounded-full bg-[#0A8FFF] animate-pulse" />
+              <span className="text-xs font-mono font-bold text-cyan-300 bg-cyan-950/80 border border-cyan-500/40 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
                 {project.statusTag}
               </span>
             ) : (
-              <span className="text-xs font-mono font-bold text-[#0A8FFF] bg-[#E8F3FF] px-2.5 py-1 rounded">
+              <span className="text-xs font-mono font-bold text-cyan-400 bg-cyan-950 px-3 py-1 rounded-full border border-cyan-500/30">
                 {project.category.toUpperCase()}
               </span>
             )}
-            <span className="text-xs font-mono font-bold text-[#777777]">
+            <span className="text-xs font-mono font-bold text-slate-400">
               YEAR {project.year}
             </span>
           </div>
 
           <button
             onClick={onClose}
-            className="p-2 text-[#777777] hover:text-[#111111] bg-[#F3F4F5] rounded-full transition-colors cursor-pointer"
-            aria-label="Close Case Study"
+            className="p-2 text-slate-400 hover:text-white bg-slate-900 border border-slate-800 rounded-full transition-colors cursor-pointer hover:border-cyan-500/40"
+            aria-label="Close modal"
           >
             <X className="w-5 h-5" />
           </button>

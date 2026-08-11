@@ -15,7 +15,7 @@ export const AboutOverview: React.FC<AboutOverviewProps> = ({ data, onOpenContac
   const handleDownloadCV = (e: React.MouseEvent) => {
     e.preventDefault();
     setDownloaded(true);
-    downloadJayGuptaCV(data);
+    downloadJayGuptaCV();
     setTimeout(() => setDownloaded(false), 3000);
   };
 
@@ -208,8 +208,8 @@ export const AboutOverview: React.FC<AboutOverviewProps> = ({ data, onOpenContac
                   </>
                 ) : (
                   <>
-                    Download Jay Gupta's CV
                     <Download className="w-4 h-4" />
+                    Download CV ↓
                   </>
                 )}
               </button>

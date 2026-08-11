@@ -56,7 +56,7 @@ export const CTA: React.FC<CTAProps> = ({ onOpenContact }) => {
                 className="inline-flex items-center gap-2 bg-[#0A8FFF] text-white px-8 py-3.5 text-xs font-bold uppercase tracking-wider rounded-full hover:bg-white hover:text-[#111111] transition-all duration-300 hover:shadow-xl cursor-pointer"
               >
                 <Download className="w-4 h-4" />
-                Download CV
+                Download CV ↓
               </button>
             </div>
           </div>
