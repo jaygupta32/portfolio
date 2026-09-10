@@ -13,18 +13,13 @@ import { ContactSection } from './components/ContactSection';
 import { ContactModal } from './components/ContactModal';
 import { ProjectDetailModal } from './components/ProjectDetailModal';
 import { CvPreviewModal } from './components/CvPreviewModal';
-import { CustomizerDrawer } from './components/CustomizerDrawer';
 import { Footer } from './components/Footer';
 
 export default function App() {
-  const [data, setData] = useState<PortfolioData>(initialData);
+  const [data] = useState<PortfolioData>(initialData);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isCvPreviewOpen, setIsCvPreviewOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  const handleResetData = () => {
-    setData(initialData);
-  };
 
   return (
     <div className="relative min-h-screen bg-[#020617] text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950 overflow-x-hidden">
@@ -103,13 +98,6 @@ export default function App() {
         isOpen={isCvPreviewOpen}
         onClose={() => setIsCvPreviewOpen(false)}
         data={data}
-      />
-
-      {/* Floating Customizer Drawer */}
-      <CustomizerDrawer
-        data={data}
-        onUpdateData={(newData) => setData(newData)}
-        onResetData={handleResetData}
       />
 
     </div>
